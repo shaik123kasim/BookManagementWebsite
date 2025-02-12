@@ -6,5 +6,5 @@ RUN mvn clean package -DskipTests
 FROM openjdk:17.0.1-jdk-slim
 WORKDIR /app
 COPY --from=build /app/target/BookStoreManagementWebsite-0.0.1-SNAPSHOT.jar BookStoreManagementWebsite.jar
-EXPOSE 8080
+EXPOSE 8081
 ENTRYPOINT ["java","-jar","BookStoreManagementWebsite.jar"]
