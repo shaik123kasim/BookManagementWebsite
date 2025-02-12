@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: BookStoreManagementWebsite
+  datasource:
+    url: jdbc:mysql://localhost:3306/bookmanagementwebsite_db
+    username: root
+    password: Shaik@4321
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+
+server:
+  port: 8081
